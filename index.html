@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="section-content">
+        <div class="content">
+          <h1 class="content__title">Демо-версия</h1>
+          <p class="content__text">
+            За 18 лет деятельности было реализовано более 500 крупных, а так же,
+            не менее 2500 средних и малых проектов. Используя знания и
+            накопленный опыт мы можем предложить
+          </p>
+          <button class="content__btn">Попробовать бесплатно</button>
+        </div>
+      </section>
+      <div class="section-image">
+        <!-- <img
+          class="image"
+          src="./assets/image/main-image.png"
+          alt="main-image"
+        /> -->
+      </div>
+    </main>
+    <section class="section-modal section-modal--active">
+      <div class="modal">
+        <button class="modal__close"></button>
+        <form class="modal__form form">
+          <h2 class="form__title">Войти в систему</h2>
+          <label class="form__label label-text" for="login_id">
+            <input
+              class="form__input"
+              type="text"
+              id="login_id"
+              placeholder="Email/Телефон"
+            />
+          </label>
+          <label class="form__label label-text" for="password_id">
+            <input
+              class="form__input"
+              type="text"
+              id="password_id"
+              placeholder="Пароль"
+            />
+          </label>
+          <label class="form__label-checkbox" for="checkbox_id">
+            <input type="checkbox" id="checkbox_id" />
+            <span class="form__input-checkbox"></span>
+            Запомнить пароль
+          </label>
+          <span class="form__link">Восстановить</span>
+          <button class="form__btn form__btn-signIn">Войти</button>
+          <button class="form__btn form__btn-register">Зарегестрироваться</button>
+        </form>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
