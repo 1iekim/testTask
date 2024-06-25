@@ -204,12 +204,24 @@ main {
 }
 
 .form__input-checkbox {
+  position: relative;
   display: block;
   width: 18px;
   height: 18px;
   background: transparent;
   border: 2px solid #323232;
   border-radius: 3px;
+}
+
+.form__input-checkbox--active::after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #323232;
+  border-radius: 2px;
 }
 
 .form__link {
