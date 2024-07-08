@@ -110,6 +110,8 @@ form.className = "modal__form form";
 
 function ModalToggle(event) {
   event.stopPropagation();
+  emailInput.value = "";
+  passwordInput.value = "";
   if (isModalOpen) {
     modalSection.remove();
     isModalOpen = false;
