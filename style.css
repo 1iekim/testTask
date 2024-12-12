@@ -1,0 +1,389 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding: 36px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1840px;
+  height: 455px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebf0fa;
+  border-radius: 10px;
+}
+
+.section-modal {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-modal--active {
+  display: flex;
+}
+
+.section-content {
+  margin-left: 72px;
+}
+
+.section-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+  max-width: 910px;
+  align-self: center;
+  background-image: url("./assets/image/main-image.png");
+  background-position: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 510px;
+  height: 100%;
+  min-height: 251px;
+  padding-right: 10px;
+}
+
+.content__title {
+  font-family: Manrope;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  color: #1f4284;
+}
+
+.content__text {
+  margin: 18px 0 36px;
+  font-family: Manrope;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27.2px;
+  text-align: left;
+  color: #727272;
+}
+
+.content__btn {
+  position: relative;
+  width: 341px;
+  height: 68px;
+  padding: 12px 12px 12px 24px;
+  border: none;
+  border-radius: 60px;
+
+  background: #244c98;
+  text-align: left;
+  font-family: Manrope;
+  font-size: 18px;
+  color: #ffffff;
+
+  transition: all 0.4s;
+}
+
+.content__btn::after {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  content: "";
+  width: 44px;
+  height: 44px;
+  background-image: url("./assets/image/Arrow-btn.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.content__btn:hover {
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+}
+
+.modal {
+  width: 100%;
+  max-width: 500px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: #f0f4fc;
+
+  font-family: Manrope;
+}
+
+.modal__close {
+  width: 52px;
+  height: 52px;
+  align-self: flex-end;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  background-image: url("./assets/image/close-btn.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  margin-bottom: 18px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32.78px;
+  text-align: left;
+  color: #323232;
+}
+
+.form__input {
+  width: 100%;
+  padding: 24px;
+  border: none;
+  border-radius: 10px;
+  background: #d7e2f6;
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24.59px;
+  text-align: left;
+}
+
+.form__input::placeholder {
+  color: #1f4284;
+}
+
+.label-text + .label-text {
+  margin-top: 4px;
+}
+
+.form__label-checkbox {
+  margin: 24px 0;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.59px;
+  text-align: left;
+  color: #323232;
+}
+
+.form__label-checkbox input {
+  display: none;
+}
+
+.form__input-checkbox {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border: 2px solid #323232;
+  border-radius: 3px;
+}
+
+.form__input-checkbox--active::after {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #323232;
+  border-radius: 2px;
+}
+
+.form__link {
+  margin-bottom: 36px;
+  width: min-content;
+
+  font-family: Manrope;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27.32px;
+  text-align: left;
+
+  color: #244c98;
+}
+
+.form__link:hover {
+  cursor: pointer;
+}
+
+.form__btn {
+  width: 100%;
+  max-width: 452px;
+  height: 65px;
+  padding: 18px 12px 18px 12px;
+  gap: 64px;
+  border-radius: 4px;
+  border: 1px solid #244c98;
+
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28.8px;
+}
+
+.form__btn + .form__btn {
+  margin-top: 4px;
+}
+
+.form__btn:hover {
+  cursor: pointer;
+}
+
+.form__btn-signIn {
+  background: #244c98;
+  color: #ffffff;
+}
+
+.form__btn-register {
+  background: transparent;
+  color: #244c98;
+}
+
+@media (max-width: 1440px) {
+  .content {
+    min-height: 245px;
+  }
+
+  .content__title {
+    font-size: 26px;
+  }
+
+  .content__text {
+    font-size: 17px;
+  }
+
+  .section-image {
+    max-width: 680px;
+    background-image: url("./assets/image/main-image-680.png");
+  }
+}
+
+@media (max-width: 769px) {
+  body {
+    padding: 24px;
+  }
+
+  main {
+    max-width: 720px;
+    height: 586px;
+    flex-direction: column;
+  }
+
+  .section-content {
+    margin: 24px;
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 0;
+    min-height: 178px;
+    justify-content: flex-start;
+  }
+
+  .content__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .content__text {
+    margin: 0;
+    margin: 18px 0 24px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .content__btn {
+    width: 261px;
+    height: 56px;
+    padding: 10px 10px 10px 18px;
+
+    font-size: 15px;
+  }
+
+  .content__btn::after {
+    width: 36px;
+    height: 36px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .section-image {
+    max-width: 100%;
+    min-height: 360px;
+    border-radius: 0 0 10px 10px;
+    background-image: url("./assets/image/main-image-780.png");
+  }
+}
+
+@media (max-width: 376px) {
+  body {
+    padding: 14px 24px;
+  }
+
+  main {
+    height: 482px;
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 0;
+    min-height: 220px;
+    justify-content: flex-start;
+  }
+
+  .content__title {
+    font-size: 17px;
+    line-height: 27.2px;
+  }
+
+  .content__text {
+    font-size: 13px;
+    line-height: 20.8px;
+  }
+
+  .content__btn {
+    width: 100%;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .section-image {
+    min-height: 220px;
+    background-image: url("./assets/image/main-image-220.png");
+  }
+}
